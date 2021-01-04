@@ -29,6 +29,7 @@ body {
     border-color: black;
     border-style: solid;
     font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
 }
 
 #answer{
