@@ -1,0 +1,138 @@
+body {
+    margin: auto;
+    display: flex;
+    flex: 100%;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-flow: column;
+    padding: 50px;
+    background-color: #66549D;
+}
+.calculator{
+    flex-wrap: wrap;
+    width: 500px;
+    height: 700px;
+    display: flex;
+    background-color: #a3a0aa;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+}
+
+.answer-area{
+    background-color: rgb(21, 94, 34);
+    width: 100%;
+    height: 15%;
+    margin: 20px 20px 0 20px;
+    border-radius: 6px;
+    border-color: black;
+    border-style: solid;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#answer{
+    margin: 0;
+    padding: 5px;
+    font-size: 75px;
+    text-align: right;
+}
+
+.buttons-area{
+    margin-left: 8px;
+    margin-top: 20px;
+    height: 77%;
+    width: 100%;
+}
+
+
+
+#eql{
+    margin: 0px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: 40px;
+    width: 24%;
+    height: 24.5%;
+    margin: 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(21, 94, 34);
+    font-size: 70px;
+}
+
+#eql:hover{
+    color:rgb(21, 94, 34);;
+    background-color: rgb(255, 255, 255);
+}
+
+
+#zero-button{
+    font-size: 40px;
+    position: relative; top: -10px;
+}
+
+#zero-buton:hover{
+    background-color: white;
+    color:rgb(39, 53, 117);
+}
+
+
+
+#clr{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: 40px;
+    width: 24%;
+    height: 24.5%;
+    position: relative; top: -10px;
+    background-color: lightcoral;
+}
+#clr:hover{
+    
+    background-color: white;
+}
+
+#divide-btn{
+    position: relative; top: -10px;
+}
+
+.num-button{
+    margin: 0px;
+    color: white;
+    background-color: rgb(39, 53, 117);
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: 40px;
+    width: 24%;
+    height: 24.5%;
+}
+
+.num-button:hover{
+    background-color: white;
+    color:rgb(39, 53, 117);
+}
+
+
+
+.operator-button{
+    background-color: rgb(255, 145, 0);
+    margin: 0px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: 40px;
+    width: 24%;
+    height: 24.5%;
+}
+
+.operator-button:hover{
+    background-color: white;
+}
+
+
