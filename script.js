@@ -7,6 +7,17 @@ lastclick = "op"; //checks if last click was any of the operators
 let display = document.getElementById('answer');
 let numbuttons = document.querySelectorAll('.num-button');
 
+numbuttons.forEach((button) =>{
+    button.addEventListener('click', updateDisplay);
+})
+
+let operatorButtons = document.querySelectorAll('.operator-button');
+operatorButtons.forEach((button) =>{
+    button.addEventListener('click', operatorClick);
+})
+
+document.querySelector('#eql').addEventListener('click', equalsClicked);
+document.querySelector('#clr').addEventListener('click', clearDisplay);
 
 
 
@@ -45,14 +56,14 @@ function divide(a, b){
     total = (a/b).toFixed(2);
 }
 
-function updateDisplay(button){
+function updateDisplay(){
     if(display.textContent === "0")
         display.textContent = "";
     else if(isOpClicked === true && lastclick == "op"){
         display.textContent = "";  
     }
 
-    display.textContent += button.textContent;
+    display.textContent += this.textContent;
     lastclick = "other";
 }
 function clearDisplay(){
@@ -65,14 +76,14 @@ function clearDisplay(){
 
 }
 
-function operatorClick(operatorButton){
+function operatorClick(){
     lastclick = "op";
     if(isOpClicked === true){
         equalsClicked();
     }
     isOpClicked = true;
     num1 = parseInt(display.innerText);
-    opClicked = operatorButton.textContent;
+    opClicked = this.textContent;
     
 
 }
