@@ -2,7 +2,8 @@ let total = 0;
 let num1 = 0;
 let num2 = 0;
 opClicked = "";
-isOpClicked = false;
+isOpClicked = false;//true if an operator was clicked, but doesn't mean last click was an op
+lastclick = "op"; //checks if last click was any of the operators
 let display = document.getElementById('answer');
 let numbuttons = document.querySelectorAll('.num-button');
 
@@ -29,28 +30,30 @@ function equalsClicked(){
 }
 
 function add(a, b){
-    total = (a+b);
+    total = (a+b).toFixed(2);
 }
 
 function subtract(a, b){
-    total = (a-b);
+    total = (a-b).toFixed(2);
 }
 
 function multiply(a, b){
-    total = (a*b);
+    total = (a*b).toFixed(2);
 }
 
 function divide(a, b){
-    total = (a*b);
+    total = (a/b).toFixed(2);
 }
 
 function updateDisplay(num){
     if(display.textContent === "0")
         display.textContent = "";
-    else if(isOpClicked === true){
-        display.textContent = "";
+    else if(isOpClicked === true && lastclick == "op"){
+        display.textContent = "";  
     }
+
     display.textContent += num.textContent;
+    lastclick = "other";
 }
 function clearDisplay(){
     display.textContent = "0"
@@ -63,6 +66,7 @@ function clearDisplay(){
 }
 
 function operatorClick(operatorButton){
+    lastclick = "op";
     if(isOpClicked === true){
         equalsClicked();
     }
