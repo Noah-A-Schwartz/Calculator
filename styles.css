@@ -30,13 +30,17 @@ body {
     border-style: solid;
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
+    word-wrap:normal;
+    overflow:auto;
+    
 }
 
 #answer{
     margin: 0;
     padding: 5px;
-    font-size: 75px;
+    overflow: hidden;
     text-align: right;
+    font-size: 70px;
 }
 
 .buttons-area{
@@ -72,7 +76,7 @@ body {
 #zero-button{
     font-size: 40px;
     height: 128.047px;
-    
+
     position: relative; top: -10px;
     
 }
@@ -91,13 +95,11 @@ body {
     font-size: 40px;
     width: 24%;
     height: 128.047px;
-    
-    position: relative; top: -10px;
-    
+    position: relative; top: -11px;
+    border-color: black;
     background-color: lightcoral;
 }
 #clr:hover{
-    
     background-color: white;
 }
 
@@ -140,6 +142,10 @@ body {
     border-radius: 10px;
     font-size: 40px;
     position: relative; top: -10px;
+}
+#decimal-button:hover{
+    background-color: white;
+    color:rgb(39, 53, 117);
 }
 
 .num-button:hover{

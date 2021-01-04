@@ -4,6 +4,7 @@ let num2 = 0;
 opClicked = "";
 isOpClicked = false;//true if an operator was clicked, but doesn't mean last click was an op
 lastclick = "op"; //checks if last click was any of the operators
+let decimalButton = document.getElementById("decimal-button")
 let display = document.getElementById('answer');
 let numbuttons = document.querySelectorAll('.num-button');
 
@@ -33,8 +34,12 @@ function operate(operator, a, b){
 }
 
 function equalsClicked(){
-    num2 = parseInt(display.textContent);
-    operate(opClicked, num1, num2);
+    num2 = Number((display.textContent));
+    if(num2 === 0 && opClicked ==="/"){
+        display.textContent = "Divide by Zero error"
+        return;
+    }
+    else operate(opClicked, num1, num2);
     num1 = total;
     display.textContent = total.toString();
     isOpClicked = false;
@@ -65,6 +70,9 @@ function updateDisplay(){
 
     display.textContent += this.textContent;
     lastclick = "other";
+    if(display.textContent.includes("."))
+    decimalButton.disabled = true;
+    else decimalButton.disabled = false;
 }
 function clearDisplay(){
     display.textContent = "0"
@@ -73,6 +81,7 @@ function clearDisplay(){
     opClicked = "";
     num1 = 0;
     num2 = 0;
+    decimalButton.disabled = false;
 
 }
 
@@ -82,7 +91,7 @@ function operatorClick(){
         equalsClicked();
     }
     isOpClicked = true;
-    num1 = parseInt(display.innerText);
+    num1 = Number((display.innerText));
     opClicked = this.textContent;
     
 
