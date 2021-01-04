@@ -56,7 +56,7 @@ body {
     border-radius: 10px;
     font-size: 40px;
     width: 24%;
-    height: 24.5%;
+    height: 128.047px;
     margin: 0px;
     color: rgb(255, 255, 255);
     background-color: rgb(21, 94, 34);
@@ -71,7 +71,10 @@ body {
 
 #zero-button{
     font-size: 40px;
+    height: 128.047px;
+    
     position: relative; top: -10px;
+    
 }
 
 #zero-buton:hover{
@@ -87,8 +90,10 @@ body {
     border-radius: 10px;
     font-size: 40px;
     width: 24%;
-    height: 24.5%;
+    height: 128.047px;
+    
     position: relative; top: -10px;
+    
     background-color: lightcoral;
 }
 #clr:hover{
@@ -96,8 +101,18 @@ body {
     background-color: white;
 }
 
-#divide-btn{
-    position: relative; top: -10px;
+.bottom-row{
+    position: relative; top: -395px;
+    
+    
+}
+
+.operator-container{
+    background-color: black;
+    width: 25%;
+    position:relative;
+    left: 365px;
+    top: -100px;
 }
 
 .num-button{
@@ -111,6 +126,20 @@ body {
     font-size: 40px;
     width: 24%;
     height: 24.5%;
+    position: relative;
+    
+}
+#decimal-button{
+    height: 128.047px;
+    margin: 0px;
+    color: white;
+    background-color: rgb(39, 53, 117);
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: 40px;
+    position: relative; top: -10px;
 }
 
 .num-button:hover{
@@ -128,12 +157,29 @@ body {
     border-width: 1px;
     border-radius: 10px;
     font-size: 40px;
-    width: 24%;
-    height: 24.5%;
+    width: 118.08px;
+    height: 99px;
+    
 }
 
 .operator-button:hover{
     background-color: white;
+    
+}
+
+.things{
+    margin: 0;
+    width: 23%;
+    height: auto;
+    display: flex;
+    align-items:right;
+    justify-content: right;
+    flex-direction: column;
+    position: relative;
+    top: -396px;
+    left: 367px;    
+   
+    
 }
 
 
