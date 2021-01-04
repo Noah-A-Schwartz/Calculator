@@ -45,14 +45,14 @@ function divide(a, b){
     total = (a/b).toFixed(2);
 }
 
-function updateDisplay(num){
+function updateDisplay(button){
     if(display.textContent === "0")
         display.textContent = "";
     else if(isOpClicked === true && lastclick == "op"){
         display.textContent = "";  
     }
 
-    display.textContent += num.textContent;
+    display.textContent += button.textContent;
     lastclick = "other";
 }
 function clearDisplay(){
